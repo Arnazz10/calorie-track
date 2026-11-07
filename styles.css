@@ -46,3 +46,94 @@ body{font-size:15px}
 .modal label,.modal input,.modal select,.modal-preview,.modal-food-info span{font-size:12px}
 .submit-button{font-size:12px}
 @media(max-width:600px){body{font-size:15px}.nav-label,.section-kicker,.eyebrow,.welcome-label{font-size:10px}.date-row h1{font-size:19px}.date-chip{font-size:10px}.welcome-copy p,.food-section-head>div>p{font-size:11px}.welcome-foot{font-size:8px}.consumed-number{font-size:21px}.consumed-number>span,.goal-copy,.inline-button{font-size:12px}.calorie-hint,.calorie-footer,.reset-button{font-size:10px}.ring-caption{font-size:8px}.macro-label,.macro-value,.macro-value strong{font-size:10px}.macro-footnote{font-size:10px}.section-header h2{font-size:18px}.add-meal-button,.text-link{font-size:10px}.meal-title,.meal-total{font-size:11px}.meal-empty,.meal-empty button,.logged-item,.logged-item-unit,.logged-item-cal{font-size:10px}.category-pill{font-size:10px}.search-wrap input{font-size:12px}.food-card-title{font-size:12px}.food-card-meta,.food-add{font-size:10px}.footer{font-size:10px}.footer>span:last-child{font-size:8px}.theme-toggle{font-size:10px}}
+
+/* A stronger type scale and contrast for comfortable everyday reading. */
+:root{--muted:#aaa99e;--muted-text:#c0bfb4;--subtle-text:#aaa99e}
+html[data-theme="light"]{--muted:#65665b;--muted-text:#55574d;--subtle-text:#606157}
+.nav-label,.section-kicker,.eyebrow,.welcome-label{font-size:12px;letter-spacing:1.25px}
+.sidebar-caption{font-size:10px;letter-spacing:1px}
+.nav-link{min-height:46px;font-size:15px}
+.date-row h1{font-size:24px}
+.welcome-copy h2{font-size:30px}
+.welcome-copy p,.food-section-head>div>p{font-size:14px}
+.welcome-label{font-size:11px}
+.welcome-foot{font-size:10px;letter-spacing:1px}
+.card{padding:22px 24px}
+.ring-number{font-size:29px}
+.ring-caption{font-size:10px}
+.consumed-number{font-size:25px}
+.consumed-number>span,.goal-copy,.inline-button{font-size:14px}
+.calorie-hint,.calorie-footer,.reset-button{font-size:12px}
+.macro-list{gap:19px;margin-top:24px}
+.macro-row{grid-template-columns:94px minmax(40px,1fr) 100px;gap:14px}
+.macro-label,.macro-value,.macro-value strong{font-size:13px}
+.macro-track{height:8px}
+.macro-footnote{font-size:12px}
+.section-header h2{font-size:22px}
+.add-meal-button,.text-link{font-size:13px}
+.meal-card{min-height:94px;padding:16px 18px}
+.meal-icon{width:30px;height:30px;font-size:14px}
+.meal-title,.meal-total{font-size:14px}
+.meal-empty,.meal-empty button,.logged-item,.logged-item-unit,.logged-item-cal{font-size:13px}
+.food-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.food-card-image{min-height:122px}
+.food-emoji{font-size:41px}
+.food-card-content{padding:12px 13px 13px}
+.food-card-title{font-size:14px}
+.food-card-meta{font-size:11px}
+.food-add{min-height:34px;font-size:12px}
+.category-pill{padding:8px 12px;font-size:12px}
+.search-wrap{height:38px}
+.search-wrap input{font-size:14px}
+.theme-toggle{min-height:38px;font-size:13px}
+.footer{font-size:13px}
+.footer>span:last-child{font-size:10px}
+@media(max-width:800px){.food-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){
+ body{font-size:16px}
+ .content-wrap{padding:17px 15px 20px}
+ .topbar{height:76px}
+ .nav-label,.section-kicker,.eyebrow,.welcome-label{font-size:11px;letter-spacing:1px}
+ .date-row h1{font-size:21px}
+ .date-chip{font-size:11px;padding:5px 9px}
+ .theme-toggle{min-height:38px;gap:6px;padding:0 10px;font-size:12px}
+ .theme-icon{font-size:17px}
+ .welcome-card{min-height:170px;padding:23px 20px}
+ .welcome-copy h2{font-size:27px}
+ .welcome-copy p,.food-section-head>div>p{font-size:12px}
+ .welcome-label{font-size:10px}
+ .welcome-foot{left:20px;font-size:8px}
+ .card{padding:16px 17px}
+ .ring-number{font-size:27px}
+ .ring-caption{font-size:9px}
+ .consumed-number{font-size:23px}
+ .consumed-number>span,.goal-copy,.inline-button{font-size:13px}
+ .calorie-hint,.calorie-footer,.reset-button{font-size:11px}
+ .macro-list{gap:16px 13px;margin-top:18px}
+ .macro-row{grid-template-columns:70px minmax(24px,1fr) 72px;gap:7px}
+ .macro-label,.macro-value,.macro-value strong{font-size:11px}
+ .macro-track{height:7px}
+ .macro-footnote{font-size:11px}
+ .section-header h2{font-size:20px}
+ .add-meal-button,.text-link{font-size:12px}
+ .meal-list{gap:9px}
+ .meal-card{min-height:88px;padding:12px}
+ .meal-icon{width:27px;height:27px;font-size:13px}
+ .meal-title,.meal-total{font-size:12px}
+ .meal-empty,.meal-empty button,.logged-item,.logged-item-unit,.logged-item-cal{font-size:11px}
+ .food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .food-card-image{min-height:100px}
+ .food-emoji{font-size:38px}
+ .food-card-content{padding:11px}
+ .food-card-title{font-size:14px}
+ .food-card-meta{font-size:10px}
+ .food-add{min-height:38px;font-size:11px}
+ .category-pill{padding:8px 11px;font-size:11px}
+ .search-wrap{height:40px}
+ .search-wrap input{font-size:14px}
+ .footer{font-size:11px}
+ .footer>span:last-child{font-size:8px}
+ .mobile-nav-link{font-size:10px}
+ .mobile-nav-link>span{font-size:19px}
+}
+@media(max-width:370px){.macro-row{grid-template-columns:62px minmax(18px,1fr) 67px;gap:6px}.meal-card{padding:10px}.welcome-copy h2{font-size:24px}.theme-label{font-size:11px}}
