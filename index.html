@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="A simple, thoughtful calorie and nutrition tracker for Indian meals and everyday training.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Daily — your nutrition, in focus</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Daily home"><span class="brand-mark">d.</span><span>daily<span class="brand-period">.</span></span></a>
+      <div class="nav-label">YOUR SPACE</div>
+      <nav class="side-nav">
+        <a class="nav-link active" href="#home" data-nav="home"><span class="nav-icon">◉</span>Overview</a>
+        <a class="nav-link" href="#diary" data-nav="diary"><span class="nav-icon">▤</span>Food diary</a>
+        <a class="nav-link" href="#foods" data-nav="foods"><span class="nav-icon">⊞</span>Food library</a>
+        <a class="nav-link" href="#progress" data-nav="progress"><span class="nav-icon">↗</span>Progress</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="streak-card"><span class="streak-icon">✳</span><div><strong>Small steps add up.</strong><span>Show up for yourself today.</span></div></div><span class="sidebar-caption">MADE FOR EVERYDAY YOU</span></div>
+    </aside>
+    <main class="main-content" id="home">
+      <header class="topbar"><div><span class="eyebrow">YOUR DAILY CHECK-IN</span><div class="date-row"><h1 id="greeting">Good morning</h1><span class="date-chip" id="today-label"></span></div></div><div class="topbar-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light mode</span></button><button class="avatar" id="profile-button" aria-label="Set your calorie goal">Y</button></div></header>
+      <div class="content-wrap">
+        <section class="welcome-card"><div class="welcome-copy"><span class="welcome-label">A FRESH START, EVERY DAY</span><h2>Eat well. Feel good.<br><span>Keep it simple.</span></h2><p>A little more mindful. A little more you.</p></div><div class="sun-art" aria-hidden="true"><div class="sun-orbit orbit-one"></div><div class="sun-orbit orbit-two"></div><div class="sun-core"></div><div class="sun-spark spark-one">✳</div><div class="sun-spark spark-two">✧</div><span class="sun-letter">d</span></div><span class="welcome-foot">CONSISTENCY OVER PERFECTION <span>✳</span></span></section>
+        <section class="summary-row" aria-label="Today's nutrition summary"><article class="card calorie-card"><div class="card-heading"><span class="section-kicker">YOUR ENERGY</span><button class="icon-button" id="calorie-help" aria-label="About your calorie target">i</button></div><div class="calorie-main"><div class="calorie-ring" id="calorie-ring"><div class="ring-center"><span class="ring-number" id="remaining-calories">2,000</span><span class="ring-caption">KCAL LEFT</span></div></div><div class="calorie-details"><div class="consumed-number" id="consumed-calories">0 <span>kcal eaten</span></div><div class="goal-copy">of <button class="inline-button" id="edit-goal">2,000 kcal</button> daily goal</div><div class="calorie-hint" id="calorie-hint">You're all set. Start with a meal.</div></div></div><div class="calorie-footer"><span><i class="legend-dot eaten-dot"></i>Eaten</span><span><i class="legend-dot remaining-dot"></i>Remaining</span><button id="reset-day" class="reset-button">Reset day</button></div></article><article class="card macros-card"><div class="card-heading"><span class="section-kicker">THE BIG THREE</span><span class="live-tag"><i></i> TODAY</span></div><div id="macro-list" class="macro-list"></div><div class="macro-footnote">A balanced day, one bite at a time.</div></article></section>
+        <section class="meals-section" id="diary"><div class="section-header"><div><span class="section-kicker">YOUR FOOD DIARY</span><h2>Meals & snacks</h2></div><button class="add-meal-button" id="add-food-button"><span>＋</span> Log food</button></div><div class="meal-list" id="meal-list"></div></section>
+        <section class="food-section" id="foods"><div class="section-header food-section-head"><div><span class="section-kicker">A LITTLE INSPIRATION</span><h2>Good food, your way<span class="heading-period">.</span></h2><p>Everyday favourites, ready when you are.</p></div><button class="text-link" id="see-all-foods">See all foods <span>→</span></button></div><div class="category-pills" id="category-pills" aria-label="Filter food categories"></div><div class="food-grid" id="food-grid"></div></section>
+        <footer class="footer"><span>Made for the way <span class="footer-heart">♥</span> you eat.</span><span>GOOD FOOD · NO GUILT · REPEAT</span></footer>
+      </div>
+    </main>
+  </div>
+  <nav class="mobile-nav" aria-label="Mobile navigation"><a href="#home" class="mobile-nav-link active" data-nav="home"><span>◉</span>Home</a><a href="#diary" class="mobile-nav-link" data-nav="diary"><span>▤</span>Diary</a><a href="#foods" class="mobile-nav-link" data-nav="foods"><span>⊞</span>Foods</a><a href="#progress" class="mobile-nav-link" data-nav="progress"><span>↗</span>Progress</a></nav>
+  <div class="modal-backdrop" id="food-modal" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" data-close-modal aria-label="Close">×</button><span class="section-kicker" id="modal-kicker">ADD TO YOUR DAY</span><h2 id="modal-title">Log a food</h2><div id="modal-food-details"></div><form id="food-form"><label for="food-serving">Serving</label><div class="serving-row"><input type="number" id="food-serving" min="0.25" step="0.25" value="1" required><span id="serving-unit">serving</span><button type="button" class="serving-adjust" data-adjust="-0.5" aria-label="Reduce serving">−</button><button type="button" class="serving-adjust" data-adjust="0.5" aria-label="Increase serving">+</button></div><label for="meal-select">Add to meal</label><select id="meal-select"><option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snacks</option></select><div id="modal-preview" class="modal-preview"></div><button class="submit-button" type="submit">Add to my diary <span>→</span></button></form></section></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
